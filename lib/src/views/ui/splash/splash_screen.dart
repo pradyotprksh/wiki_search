@@ -9,7 +9,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         body: Center(
-          child: TyperAnimatedTextKit(
+          child: TypewriterAnimatedTextKit(
             totalRepeatCount: 1,
             speed: const Duration(milliseconds: 200),
             text: [
