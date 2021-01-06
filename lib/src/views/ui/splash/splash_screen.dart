@@ -8,6 +8,7 @@ import 'package:shared/shared.dart';
 class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
+    backgroundColor: ColorsValue.primaryColor,
         body: Center(
           child: TypewriterAnimatedTextKit(
             totalRepeatCount: 1,
@@ -16,11 +17,11 @@ class SplashScreen extends StatelessWidget {
               StringConstants.appName,
             ],
             repeatForever: false,
-            textStyle: Styles.boldAppColor30,
+            textStyle: Styles.boldWhite30,
             onFinished: () {
               RouteManagement.goToSearchScreen();
             },
           ),
-        ),
+    ),
       );
 }
