@@ -1,5 +1,5 @@
-name: initial_setup
-description: A initial setup for the flutter project.
+name: WikiSearch
+description: A wikipidea search application.
 
 publish_to: 'none'
 

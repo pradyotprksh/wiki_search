@@ -1,8 +1,8 @@
+import 'package:WikiSearch/src/views/views.dart';
 import 'package:core/core.dart';
 import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:initial_setup/src/views/views.dart';
 import 'package:shared/shared.dart';
 
 /// Main entry of the application
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var localLang =
-        Get.find<LocalRepository>().getStringValue(LocalKeys.localLang);
+    Get.find<LocalRepository>().getStringValue(LocalKeys.localLang);
 
     return DynamicTheme(
       defaultBrightness: Brightness.light,

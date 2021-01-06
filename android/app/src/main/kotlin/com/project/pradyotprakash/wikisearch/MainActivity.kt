@@ -1,4 +1,4 @@
-package com.project.pradyotprakash.initial_setup
+package com.project.pradyotprakash.wikisearch
 
 import io.flutter.embedding.android.FlutterActivity
 
