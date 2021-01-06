@@ -13,5 +13,23 @@ class SearchScreen extends StatelessWidget {
             Icons.history,
           ),
         ),
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: Colors.transparent,
+          elevation: Dimens.zero,
+          title: TextFormField(
+            style: Styles.black18,
+            textCapitalization: TextCapitalization.sentences,
+            decoration: InputDecoration(
+              filled: true,
+              hintStyle: Styles.black18,
+              hintText: StringConstants.appName,
+              fillColor: Colors.white70,
+            ),
+          ),
+        ),
+        body: ListView(
+          shrinkWrap: true,
+        ),
       );
 }
