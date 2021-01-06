@@ -9,6 +9,7 @@ import 'package:shared/shared.dart';
 void main() async {
   try {
     WidgetsFlutterBinding.ensureInitialized();
+    Get.put(LocalRepository());
     await Get.find<LocalRepository>().init();
     runApp(MyApp());
   } catch (error) {

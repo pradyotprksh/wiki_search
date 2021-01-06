@@ -3,3 +3,4 @@
 /// the view related logic like the nodes, controller, etc. To make the view
 /// code much cleaner and understandable.
 export 'ui/ui.dart';
+export 'utils/utils.dart';

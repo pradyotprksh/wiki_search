@@ -13,7 +13,6 @@ class TranslationsFile extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
         'en': {
-          'appName': 'Initial Setup',
           'somethingWentWrong': 'Oops!! Something went wrong.',
         },
       };
