@@ -1,0 +1,32 @@
+name: initial_setup
+description: A initial setup for the flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  core:
+    path: core
+
+  shared:
+    path: shared
+
+  dependencies:
+    path: dependencies
+
+flutter:
+
+  uses-material-design: true

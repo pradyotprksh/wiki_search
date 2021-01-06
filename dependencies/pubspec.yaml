@@ -1,0 +1,27 @@
+name: dependencies
+description: A flutter dependency module which contains all the packages used in the project.
+version: 0.0.1
+author: Pradyot Prakash
+homepage: https://play.google.com/store/apps/developer?id=Pradyot+Prakash
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  google_fonts: ^1.1.1
+
+  get: ^3.24.0
+
+  dynamic_theme: ^1.0.1
+
+  shared_preferences: ^0.5.12+4
+
+  logger: ^0.9.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
