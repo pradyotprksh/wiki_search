@@ -4,4 +4,5 @@ import 'package:get/get.dart';
 /// library to get the current locale string value from the translation file.
 abstract class StringConstants {
   static String appName = 'appName'.tr;
+  static String somethingWentWrong = 'somethingWentWrong'.tr;
 }

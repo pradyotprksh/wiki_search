@@ -14,6 +14,7 @@ class TranslationsFile extends Translations {
   Map<String, Map<String, String>> get keys => {
         'en': {
           'appName': 'Initial Setup',
+          'somethingWentWrong': 'Oops!! Something went wrong.',
         },
       };
 }

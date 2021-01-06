@@ -2,4 +2,5 @@
 /// a remote or local call
 abstract class NetworkConstants {
   static const String defaultLang = 'en';
+  static const String baseUrl = 'https://en.wikipedia.org/w';
 }
