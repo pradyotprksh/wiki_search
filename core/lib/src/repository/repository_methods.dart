@@ -8,7 +8,7 @@ abstract class RepositoryMethods {
   /// Returns the response for the searched query.
   ///
   /// [searchedQuery] : the searched text.
-  Future<String> search(
+  Future<WikiSearchResponse> search(
     String searchedQuery,
   );
 }

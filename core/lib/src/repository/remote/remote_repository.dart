@@ -17,7 +17,7 @@ class RemoteRepository extends RepositoryMethods {
   RestClient _restClient;
 
   @override
-  Future<String> search(String searchedQuery) async {
+  Future<WikiSearchResponse> search(String searchedQuery) async {
     if (await Utility.isNetworkAvailable()) {
       return _restClient.search(searchedQuery);
     } else {

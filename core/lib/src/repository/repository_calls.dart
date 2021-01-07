@@ -9,6 +9,6 @@ class RepositoryCalls extends RepositoryMethods {
   final RemoteRepository _remoteRepository = Get.put(RemoteRepository());
 
   @override
-  Future<String> search(String searchedQuery) =>
+  Future<WikiSearchResponse> search(String searchedQuery) =>
       _remoteRepository.search(searchedQuery);
 }

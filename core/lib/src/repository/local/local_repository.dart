@@ -23,7 +23,7 @@ class LocalRepository extends RepositoryMethods {
   }
 
   @override
-  Future<String> search(String searchedQuery) {
+  Future<WikiSearchResponse> search(String searchedQuery) {
     throw UnimplementedError();
   }
 }
