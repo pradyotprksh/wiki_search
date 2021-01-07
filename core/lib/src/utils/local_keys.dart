@@ -4,4 +4,5 @@ import 'package:core/core.dart';
 /// be used by [LocalRepository] to get/save the data locally.
 abstract class LocalKeys {
   static const String localLang = 'localLang';
+  static const String clickedValue = 'clickedValue';
 }

@@ -22,6 +22,18 @@ class LocalRepository extends RepositoryMethods {
     return _sharedPreference.getString(key) ?? '';
   }
 
+  /// Set values locally for the given [key]
+  void storeData(String key, String value) {
+    var savedData = <String>[];
+    if (key == LocalKeys.clickedValue) {
+      savedData = _sharedPreference.getStringList(key);
+      if (savedData != null) {
+        savedData.add(value);
+      }
+    }
+    _sharedPreference.setStringList(key, savedData);
+  }
+
   @override
   Future<WikiSearchResponse> search(String searchedQuery) {
     throw UnimplementedError();

@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:core/core.dart';
 import 'package:data_connection_checker/data_connection_checker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -108,6 +109,7 @@ abstract class Utility {
   /// Open the url if its a valid link.
   static void openUrl(String title) async {
     if (await canLaunch('https://en.wikipedia.org/wiki/$title')) {
+      Get.find<LocalRepository>().storeData(LocalKeys.clickedValue, title);
       await launch('https://en.wikipedia.org/wiki/$title');
     }
   }
