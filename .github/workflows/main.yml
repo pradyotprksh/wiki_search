@@ -21,3 +21,8 @@ jobs:
           flutter pub get
           flutter pub run build_runner build
       - run: flutter analyze
+      - run: flutter build apk
+      - uses: actions/upload-artifact@master
+        with:
+          name: wiki-search-release
+          path: build/app/outputs/flutter-apk/app-release.apk
