@@ -28,6 +28,12 @@ dependencies:
 
   animated_text_kit: ^3.1.0
 
+  equatable: ^1.2.5
+
+  connectivity: ^2.0.2
+
+  data_connection_checker: ^0.3.4
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
