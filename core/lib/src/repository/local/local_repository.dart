@@ -1,4 +1,5 @@
 import 'package:core/core.dart';
+import 'package:core/src/utils/local_keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// A local repository class which will help us to connect to the
@@ -22,14 +23,19 @@ class LocalRepository extends RepositoryMethods {
     return _sharedPreference.getString(key) ?? '';
   }
 
+  /// Returns the list string values for the [key]
+  List<String> getListStringValue(String key) =>
+      _sharedPreference.getStringList(key) ?? [];
+
   /// Set values locally for the given [key]
   void storeData(String key, String value) {
     var savedData = <String>[];
-    if (key == LocalKeys.clickedValue) {
-      savedData = _sharedPreference.getStringList(key);
-      if (savedData != null) {
-        savedData.add(value);
+    if (key == LocalKeys.clickedValue &&
+        _sharedPreference.containsKey(LocalKeys.clickedValue)) {
+      if (_sharedPreference.getStringList(key) != null) {
+        savedData = _sharedPreference.getStringList(key);
       }
+      savedData.add(value);
     }
     _sharedPreference.setStringList(key, savedData);
   }

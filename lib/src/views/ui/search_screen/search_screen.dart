@@ -19,7 +19,9 @@ class SearchScreen extends StatelessWidget {
           extendBody: true,
           backgroundColor: Get.theme.backgroundColor,
           floatingActionButton: FloatingActionButton(
-            onPressed: () {},
+            onPressed: () {
+              Utility.openHistoryPage();
+            },
             backgroundColor: ColorsValue.primaryColor,
             child: const Icon(
               Icons.history,

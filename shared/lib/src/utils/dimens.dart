@@ -47,6 +47,7 @@ abstract class Dimens {
   static double fourteenPercent = Get.height * 0.14;
   static double zeroSixtyFivePercent = Get.height * 0.065;
   static double fifteenPercent = Get.height * 0.15;
+  static double fiftyPercent = Get.height * 0.5;
   static double twoPercent = Get.height * 0.2;
   static double fourtyNinePercent = Get.height * 0.49;
   static const EdgeInsets padding24_0_24_10 = EdgeInsets.fromLTRB(

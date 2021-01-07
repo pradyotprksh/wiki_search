@@ -9,4 +9,5 @@ abstract class StringConstants {
   static String search = 'search'.tr;
   static String pageNotFound = 'pageNotFound'.tr;
   static String okay = 'okay'.tr;
+  static String history = 'history'.tr;
 }

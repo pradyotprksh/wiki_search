@@ -17,6 +17,7 @@ class TranslationsFile extends Translations {
           'search': 'Search',
           'pageNotFound': '404!!',
           'okay': 'Okay',
+          'history': 'History',
           'noInternet':
               'You are not connected to the internet. Please enable internet to start using the application',
         },

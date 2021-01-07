@@ -113,4 +113,58 @@ abstract class Utility {
       await launch('https://en.wikipedia.org/wiki/$title');
     }
   }
+
+  static void openHistoryPage() {
+    var history =
+        Get.find<LocalRepository>().getListStringValue(LocalKeys.clickedValue);
+    print(history);
+    Get.bottomSheet<void>(
+      Scaffold(
+        appBar: AppBar(
+          leading: const CloseButton(
+            color: Colors.black,
+          ),
+          title: Text(
+            StringConstants.history,
+            style: Styles.black18,
+          ),
+          backgroundColor: Colors.white,
+        ),
+        body: (!history.isNotEmpty)
+            ? SizedBox(
+                height: Dimens.fiftyPercent,
+                child: ListView.builder(
+                    padding: Dimens.padding5,
+                    shrinkWrap: true,
+                    itemCount: history.length,
+                    itemBuilder: (_, position) => Card(
+                          child: ListTile(
+                            leading: Image.asset(
+                              AssetsConstants.defaultLogo,
+                              width: Dimens.fifty,
+                              height: Dimens.fifty,
+                            ),
+                            onTap: () {
+                              openUrl(history[position]);
+                            },
+                            title: Text(
+                              history[position],
+                              style: Styles.black18,
+                            ),
+                          ),
+                        )),
+              )
+            : Container(
+                child: Center(
+                  child: Icon(
+                    Icons.history,
+                    color: Colors.black,
+                    size: Dimens.fifteenPercent,
+                  ),
+                ),
+              ),
+      ),
+      backgroundColor: Colors.white,
+    );
+  }
 }
