@@ -4,7 +4,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:shared/shared.dart';
 
+/// A search screen which will handle all the ui realted work.
 class SearchScreen extends StatelessWidget {
+  final SearchInterface _searchInterface = Get.find();
+
   @override
   Widget build(BuildContext context) => BlocListener<SearchBloc, SearchState>(
         listener: (_, state) {
@@ -45,11 +48,8 @@ class SearchScreen extends StatelessWidget {
                 ),
               ),
               onChanged: (value) {
-                context.read<SearchBloc>().add(
-                      SearchQueryChange(
-                        query: value,
-                      ),
-                    );
+                _searchInterface.buildContext = context;
+                _searchInterface.query.value = value;
               },
             ),
           ),
@@ -60,10 +60,10 @@ class SearchScreen extends StatelessWidget {
                   padding: Dimens.margin0_10_0_0,
                   shrinkWrap: true,
                   itemCount:
-                      state.wikiSearchResponse?.query?.pages?.length ?? 0,
+                  state.wikiSearchResponse?.query?.pages?.length ?? 0,
                   itemBuilder: (_, position) {
                     var singlePage =
-                        state.wikiSearchResponse.query.pages[position];
+                    state.wikiSearchResponse.query.pages[position];
                     return Card(
                       margin: Dimens.padding5,
                       child: ListTile(
@@ -72,15 +72,15 @@ class SearchScreen extends StatelessWidget {
                         },
                         leading: (singlePage.thumbnail?.source ?? '').isNotEmpty
                             ? Image.network(
-                                singlePage.thumbnail.source,
-                                width: Dimens.fifty,
-                                height: Dimens.fifty,
-                              )
+                          singlePage.thumbnail.source,
+                          width: Dimens.fifty,
+                          height: Dimens.fifty,
+                        )
                             : Image.asset(
-                                AssetsConstants.defaultLogo,
-                                width: Dimens.fifty,
-                                height: Dimens.fifty,
-                              ),
+                          AssetsConstants.defaultLogo,
+                          width: Dimens.fifty,
+                          height: Dimens.fifty,
+                        ),
                         title: Text(
                           singlePage.title ?? '',
                           style: Styles.black18,
