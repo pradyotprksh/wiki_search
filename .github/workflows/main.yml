@@ -21,8 +21,3 @@ jobs:
           flutter pub get
           flutter pub run build_runner build
       - run: flutter analyze
-      - run: flutter build apk --target-platform android-arm,android-arm64,android-x64 --split-per-abi
-      - uses: actions/upload-artifact@master
-        with:
-          name: wiki-search-release
-          path: build/app/outputs/flutter-apk/app-release.apk
