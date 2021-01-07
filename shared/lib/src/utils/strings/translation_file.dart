@@ -14,6 +14,8 @@ class TranslationsFile extends Translations {
   Map<String, Map<String, String>> get keys => {
         'en': {
           'somethingWentWrong': 'Oops!! Something went wrong.',
+          'noInternet':
+              'You are not connected to the internet. Please enable internet to start using the application',
         },
       };
 }

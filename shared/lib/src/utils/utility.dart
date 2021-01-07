@@ -1,5 +1,8 @@
 import 'dart:ui';
 
+import 'package:data_connection_checker/data_connection_checker.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:intl/intl.dart' as intl;
 import 'package:logger/logger.dart';
 import 'package:shared/shared.dart';
@@ -35,5 +38,41 @@ abstract class Utility {
       return TextDirection.rtl;
     }
     return TextDirection.ltr;
+  }
+
+  /// Returns future bool value depending on the internet
+  /// connectivity.
+  static Future<bool> isNetworkAvailable() async =>
+      await DataConnectionChecker().hasConnection;
+
+  /// Close any open dialog.
+  static void closeDialog() {
+    if (Get.isDialogOpen ?? false) Get.back<void>();
+  }
+
+  /// Show no internet dialog if there is no
+  /// internet available.
+  static void showNoInternetDialog() {
+    closeDialog();
+    Get.dialog<void>(
+      Scaffold(
+        backgroundColor: Colors.black12,
+        body: Padding(
+          padding: Dimens.padding15,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                StringConstants.noInternet,
+                textAlign: TextAlign.center,
+                style: Styles.boldWhite23,
+              ),
+            ],
+          ),
+        ),
+      ),
+      barrierDismissible: false,
+    );
   }
 }

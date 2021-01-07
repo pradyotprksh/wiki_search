@@ -5,4 +5,5 @@ import 'package:get/get.dart';
 abstract class StringConstants {
   static String appName = 'Wiki Search';
   static String somethingWentWrong = 'somethingWentWrong'.tr;
+  static String noInternet = 'noInternet'.tr;
 }
