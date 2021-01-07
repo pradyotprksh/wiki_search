@@ -348,6 +348,12 @@ abstract class Styles {
     fontSize: Dimens.thirty,
   );
 
+  static TextStyle boldWhite150 = GoogleFonts.ptSans(
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+    fontSize: Dimens.oneHundredFifty,
+  );
+
   static TextStyle boldBlack26 = GoogleFonts.ptSans(
     fontWeight: FontWeight.bold,
     color: Colors.black,

@@ -6,4 +6,6 @@ abstract class StringConstants {
   static String appName = 'Wiki Search';
   static String somethingWentWrong = 'somethingWentWrong'.tr;
   static String noInternet = 'noInternet'.tr;
+  static String search = 'search'.tr;
+  static String pageNotFound = 'pageNotFound'.tr;
 }
