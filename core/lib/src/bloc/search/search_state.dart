@@ -7,18 +7,22 @@ class SearchState extends Equatable {
   const SearchState({
     this.searchStatus = SearchStatus.idle,
     this.errorMessage = '',
+    this.wikiSearchResponse,
   });
 
   final SearchStatus searchStatus;
   final String errorMessage;
+  final WikiSearchResponse wikiSearchResponse;
 
   SearchState copyWith({
     SearchStatus searchStatus,
     String errorMessage,
+    WikiSearchResponse wikiSearchResponse,
   }) =>
       SearchState(
         searchStatus: searchStatus ?? this.searchStatus,
         errorMessage: errorMessage ?? this.errorMessage,
+        wikiSearchResponse: wikiSearchResponse ?? this.wikiSearchResponse,
       );
 
   @override

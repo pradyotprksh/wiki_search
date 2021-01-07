@@ -108,6 +108,9 @@ abstract class Dimens {
   static const EdgeInsets padding15 = EdgeInsets.all(
     fifteen,
   );
+  static const EdgeInsets padding5 = EdgeInsets.all(
+    five,
+  );
   static const EdgeInsets padding40 = EdgeInsets.all(
     fourty,
   );

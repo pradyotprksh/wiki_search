@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart' as intl;
 import 'package:logger/logger.dart';
 import 'package:shared/shared.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 /// A chunk of methods which can be used to
 /// the common operations performed everywhere
@@ -74,5 +75,40 @@ abstract class Utility {
       ),
       barrierDismissible: false,
     );
+  }
+
+  /// Show an error snack bar.
+  ///
+  /// [message] : error message.
+  static void showError(String message) {
+    closeDialog();
+    Get.rawSnackbar(
+      messageText: Text(
+        message,
+        style: Styles.white16,
+      ),
+      mainButton: FlatButton(
+        onPressed: () {
+          if (Get.isSnackbarOpen) {
+            Get.back<void>();
+          }
+        },
+        child: Text(
+          StringConstants.okay,
+          style: Styles.white14,
+        ),
+      ),
+      backgroundColor: Colors.red,
+      margin: Dimens.padding15,
+      borderRadius: Dimens.fifteen,
+      snackStyle: SnackStyle.FLOATING,
+    );
+  }
+
+  /// Open the url if its a valid link.
+  static void openUrl(String title) async {
+    if (await canLaunch('https://en.wikipedia.org/wiki/$title')) {
+      await launch('https://en.wikipedia.org/wiki/$title');
+    }
   }
 }

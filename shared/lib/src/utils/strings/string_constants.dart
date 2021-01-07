@@ -8,4 +8,5 @@ abstract class StringConstants {
   static String noInternet = 'noInternet'.tr;
   static String search = 'search'.tr;
   static String pageNotFound = 'pageNotFound'.tr;
+  static String okay = 'okay'.tr;
 }

@@ -16,6 +16,7 @@ class TranslationsFile extends Translations {
           'somethingWentWrong': 'Oops!! Something went wrong.',
           'search': 'Search',
           'pageNotFound': '404!!',
+          'okay': 'Okay',
           'noInternet':
               'You are not connected to the internet. Please enable internet to start using the application',
         },

@@ -24,7 +24,15 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
     );
     try {
       if (event.query.isNotEmpty) {
-        await _repositoryCalls.search(event.query);
+        var data = await _repositoryCalls.search(event.query);
+        yield state.copyWith(
+          searchStatus: SearchStatus.results,
+          wikiSearchResponse: data,
+        );
+      } else {
+        yield state.copyWith(
+          searchStatus: SearchStatus.idle,
+        );
       }
     } on DioError catch (exception) {
       yield state.copyWith(

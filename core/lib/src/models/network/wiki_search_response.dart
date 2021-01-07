@@ -17,12 +17,12 @@ class WikiSearchResponse {
 
   bool batchcomplete;
   Continue wikiSearchResponseContinue;
-  Query query;
+  Queries query;
 
   WikiSearchResponse copyWith({
     bool batchcomplete,
     Continue wikiSearchResponseContinue,
-    Query query,
+    Queries query,
   }) =>
       WikiSearchResponse(
         batchcomplete: batchcomplete ?? this.batchcomplete,
@@ -33,24 +33,25 @@ class WikiSearchResponse {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Query {
-  Query({
+class Queries {
+  Queries({
     this.redirects,
     this.pages,
   });
 
-  factory Query.fromJson(Map<String, dynamic> json) => _$QueryFromJson(json);
+  factory Queries.fromJson(Map<String, dynamic> json) =>
+      _$QueriesFromJson(json);
 
-  Map<String, dynamic> toJson() => _$QueryToJson(this);
+  Map<String, dynamic> toJson() => _$QueriesToJson(this);
 
   List<Redirect> redirects;
   List<Page> pages;
 
-  Query copyWith({
+  Queries copyWith({
     List<Redirect> redirects,
     List<Page> pages,
   }) =>
-      Query(
+      Queries(
         redirects: redirects ?? this.redirects,
         pages: pages ?? this.pages,
       );
