@@ -133,25 +133,15 @@ abstract class Utility {
             ? SizedBox(
                 height: Dimens.fiftyPercent,
                 child: ListView.builder(
-                    padding: Dimens.padding5,
-                    shrinkWrap: true,
-                    itemCount: history.length,
-                    itemBuilder: (_, position) => Card(
-                          child: ListTile(
-                            leading: Image.asset(
-                              AssetsConstants.defaultLogo,
-                              width: Dimens.fifty,
-                              height: Dimens.fifty,
-                            ),
-                            onTap: () {
-                              openUrl(history[position]);
-                            },
-                            title: Text(
-                              history[position],
-                              style: Styles.black18,
-                            ),
-                          ),
-                        )),
+                  padding: Dimens.padding5,
+                  shrinkWrap: true,
+                  itemCount: history.length,
+                  itemBuilder: (_, position) => SingleSearchedItem(
+                    history[position],
+                    '',
+                    '',
+                  ),
+                ),
               )
             : Container(
                 child: Center(

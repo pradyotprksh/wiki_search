@@ -6,3 +6,4 @@ export 'strings/string_constants.dart';
 export 'strings/translation_file.dart';
 export 'styles.dart';
 export 'utility.dart';
+export 'widgets/widgets.dart';
