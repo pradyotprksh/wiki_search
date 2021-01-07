@@ -23,7 +23,9 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
       searchStatus: SearchStatus.loading,
     );
     try {
-      await _repositoryCalls.search(event.query);
+      if (event.query.isNotEmpty) {
+        await _repositoryCalls.search(event.query);
+      }
     } on DioError catch (exception) {
       yield state.copyWith(
         searchStatus: SearchStatus.error,

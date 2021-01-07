@@ -8,7 +8,7 @@ class LogInterceptors extends Interceptor {
   @override
   Future onRequest(RequestOptions options) async {
     Utility.printILog(
-        'onRequest ${options.method} ${options.baseUrl}${options.path} ${options.data}');
+        'onRequest ${options.method} ${options.baseUrl}${options.path} ${options.queryParameters}');
     return options;
   }
 
