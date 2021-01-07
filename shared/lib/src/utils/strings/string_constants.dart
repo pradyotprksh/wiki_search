@@ -10,4 +10,5 @@ abstract class StringConstants {
   static String pageNotFound = 'pageNotFound'.tr;
   static String okay = 'okay'.tr;
   static String history = 'history'.tr;
+  static String emptyText = 'emptyText'.tr;
 }
