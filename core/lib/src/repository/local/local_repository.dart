@@ -7,7 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 /// some reason in the future. If its required for a single application launch
 /// then constants can be used instead of local storage. Will also be used as
 /// a cache mechanism if the data is not available from the remote.
-class LocalRepository {
+class LocalRepository extends RepositoryMethods {
   Future<void> init() async {
     _sharedPreference ??= await SharedPreferences.getInstance();
   }
@@ -20,5 +20,10 @@ class LocalRepository {
       return _sharedPreference.getString(key) ?? NetworkConstants.defaultLang;
     }
     return _sharedPreference.getString(key) ?? '';
+  }
+
+  @override
+  Future<String> search(String searchedQuery) {
+    throw UnimplementedError();
   }
 }

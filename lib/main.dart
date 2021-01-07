@@ -2,6 +2,7 @@ import 'package:WikiSearch/src/views/views.dart';
 import 'package:core/core.dart';
 import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:shared/shared.dart';
 
@@ -9,6 +10,7 @@ import 'package:shared/shared.dart';
 void main() async {
   try {
     WidgetsFlutterBinding.ensureInitialized();
+    Bloc.observer = BlocObservers();
     Get.put(LocalRepository());
     await Get.find<LocalRepository>().init();
     runApp(MyApp());

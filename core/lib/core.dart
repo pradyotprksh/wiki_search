@@ -8,6 +8,8 @@
 library core;
 
 export 'src/bindings/bindings.dart';
+export 'src/bloc/bloc.dart';
+export 'src/interface/interface.dart';
 export 'src/models/model.dart';
 export 'src/repository/repository.dart';
 export 'src/services/services.dart';
