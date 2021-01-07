@@ -127,3 +127,5 @@ thorugh this [link](https://dart.dev/guides/language/effective-dart). For better
 add comment for each and every line. Since in flutter we divide the code in different files some
 times the name doesn't actually clarify what does the file/class/methods/variable does. So if
 required the docmentation must be added.
+
+wiki_search
