@@ -3,4 +3,5 @@
 abstract class NetworkConstants {
   static const String defaultLang = 'en';
   static const String baseUrl = 'https://en.wikipedia.org/w';
+  static const int noInternetCode = 502;
 }

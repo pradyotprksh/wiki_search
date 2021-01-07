@@ -18,4 +18,10 @@ abstract class RestClient {
     dio.interceptors.add(LogInterceptors());
     return _RestClient(dio, baseUrl: baseUrl);
   }
+
+  @GET(
+      '/api.php?action=query&format=json &prop=pageimages%7Cpageterms&generator=prefixsearch&redirects=1&formatversion=2&piprop=thumbnail&pithumbsize=50&pilimit=10&wbptterms=description&gpslimit=20')
+  Future<String> search(
+    @Query('gpssearch') String searchedQuery,
+  );
 }
