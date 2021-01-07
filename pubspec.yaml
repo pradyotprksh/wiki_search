@@ -14,10 +14,6 @@ dependencies:
 
   cupertino_icons: ^1.0.0
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-
   core:
     path: core
 
@@ -26,6 +22,18 @@ dev_dependencies:
 
   dependencies:
     path: dependencies
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_launcher_icons: ^0.8.1
+
+flutter_icons:
+  android: "ic_launcher"
+  ios: true
+  image_path: "assets/default_logo.png"
+  adaptive_icon_background: #000000
 
 flutter:
 
