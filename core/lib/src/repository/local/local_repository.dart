@@ -35,7 +35,9 @@ class LocalRepository extends RepositoryMethods {
       if (_sharedPreference.getStringList(key) != null) {
         savedData = _sharedPreference.getStringList(key);
       }
-      savedData.add(value);
+      if (!savedData.contains(value)) {
+        savedData.add(value);
+      }
     }
     _sharedPreference.setStringList(key, savedData);
   }

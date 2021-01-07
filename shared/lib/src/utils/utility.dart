@@ -117,7 +117,6 @@ abstract class Utility {
   static void openHistoryPage() {
     var history =
         Get.find<LocalRepository>().getListStringValue(LocalKeys.clickedValue);
-    print(history);
     Get.bottomSheet<void>(
       Scaffold(
         appBar: AppBar(
@@ -130,7 +129,7 @@ abstract class Utility {
           ),
           backgroundColor: Colors.white,
         ),
-        body: (!history.isNotEmpty)
+        body: (history.isNotEmpty)
             ? SizedBox(
                 height: Dimens.fiftyPercent,
                 child: ListView.builder(
