@@ -54,6 +54,10 @@ Github action will not allow merge option.
 For cloning there are fews steps which needs to be followed so that there will be no issue while
 running the project. After downloading the project few command needs to be run from the terminal.
 
+NOTE: You can use single line for running all the command at once. Copy
+`flutter clean & flutter pub get & cd core & flutter clean & flutter pub get & flutter packages pub run build_runner build --delete-conflicting-outputs & cd .. & cd dependencies & flutter clean & flutter pub get & cd .. & cd shared & flutter clean & flutter pub get & cd .. & flutter analyze`
+this and press enter.
+
 1. `flutter clean`
 2. `cd core`
     1. `flutter clean`
